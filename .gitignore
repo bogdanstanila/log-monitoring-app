@@ -18,7 +18,7 @@ env/
 Thumbs.db           # Windows specific
 
 # Log files (to avoid versioning any logs generated)
-*.log
+# *.log
 
 # Test coverage report files
 .coverage
