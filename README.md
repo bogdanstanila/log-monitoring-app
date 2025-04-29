@@ -7,6 +7,21 @@ This application reads a log file `logs.log`, tracks the start and end of jobs u
 - **Warning**: Job duration > 5 minutes
 - **Error**: Job duration > 10 minutes
 
+## How to Run
+
+1. Place your `logs.log` file in the same directory as the `log_monitor.py` script.
+
+2. Run the following command to execute the log monitor:
+   ```bash
+   python3 log_monitor.py
+
+## Run the Tests
+- Unit tests are available for validating the behavior of the log monitoring application.
+
+- Run the tests using the following command:
+    ```bash
+    python3 -m unittest test_log_monitor.py
+
 ## Edge Cases and Assumptions
 
 The application handles the following edge cases that may occur in the log file:
@@ -62,19 +77,3 @@ WARNING: Job 'long nightly backup' with PID 44000 took 6 minutes.
 | END without START         | Ignored                  | Warning     | ❌ No                |
 | START without END         | Ignored                  | Warning     | ❌ No                |
 | Spans midnight            | Time adjusted correctly  | Warning/Error if thresholds hit | ✅ Yes        |
-
-## How to Run
-
-1. Place your `logs.log` file in the same directory as the `log_monitor.py` script.
-
-2. Run the following command to execute the log monitor:
-   ```bash
-   python3 log_monitor.py
-
-## Run the Tests
-- Unit tests are available for validating the behavior of the log monitoring application.
-
-- Run the tests using the following command:
-    ```bash
-    python3 -m unittest test_log_monitor.py
-
