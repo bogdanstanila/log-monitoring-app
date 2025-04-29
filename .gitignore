@@ -1,0 +1,36 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Virtual environment folders
+venv/
+.env/
+env/
+.venv/
+
+# IDE and editor specific files (e.g., VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.iml
+
+# Operating system files
+.DS_Store           # macOS specific
+Thumbs.db           # Windows specific
+
+# Log files (to avoid versioning any logs generated)
+*.log
+
+# Test coverage report files
+.coverage
+*.cover
+*.py,cover
+
+# Python distribution and packaging files
+*.egg
+*.egg-info
+dist/
+build/
+*.whl
+
+# Temporary files created by editors or system
+*.swp
