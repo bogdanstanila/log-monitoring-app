@@ -19,7 +19,7 @@ These are considered **invalid** jobs because we don’t know when they began.
 - A **warning** is logged to notify that an END entry has no corresponding START.
 
 **Example log entry:**
-[⚠️ Suspicious Content] 12:10:45, scheduled task ghost, END,99887
+12:10:45, scheduled task ghost, END,99887
 
 **Logged warning:**
 WARNING: END found for PID 99887 without a matching START.
@@ -65,19 +65,16 @@ WARNING: Job 'long nightly backup' with PID 44000 took 6 minutes.
 
 ## How to Run
 
-1. Clone or download the repository.
+1. Place your `logs.log` file in the same directory as the `log_monitor.py` script.
 
-2. Ensure you have Python 3.6 or higher installed.
-
-3. Place your `logs.log` file in the same directory as the `log_monitor.py` script.
-
-4. Run the following command to execute the log monitor:
+2. Run the following command to execute the log monitor:
    ```bash
    python3 log_monitor.py
-Run the Tests
-Unit tests are available for validating the behavior of the log monitoring application.
 
-Run the tests using the following command:
+## Run the Tests
+- Unit tests are available for validating the behavior of the log monitoring application.
 
-python3 -m unittest test_log_monitor.py
+- Run the tests using the following command:
+    ```bash
+    python3 -m unittest test_log_monitor.py
 
